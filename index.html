@@ -24,6 +24,9 @@
             font-weight: bolder;
             margin-top: 20px;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .space-between {
@@ -41,7 +44,8 @@
             top: 0;
             right: 0;
         }
-        .section2 .heading .right{
+
+        .section2 .heading .right {
             right: 0;
         }
 
@@ -50,23 +54,26 @@
             background-color: black;
         }
 
-        .about {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
+        .about,
         .personalInfo {
-            position: absolute;
-            top: 0;
-            right: 0;
+            flex-basis: calc(50% - 30px);
+            /* Adjust width of spans to fit two side by side with margin */
+            margin: 1px;
+            /* Add margin to create space between spans */
         }
 
-        @media screen and (max-width: 400px) {
+        @media(min-width: 400px) and (max-width: 600px) {
             body {
                 padding-left: 10px;
                 padding-right: 10px;
                 font-size: 10px;
+                margin-bottom: 2rem;
+            }
+
+            .about,
+            .personalInfo {
+                flex-basis: 100%;
+                /* Make spans take full width on smaller screens */
             }
         }
     </style>
@@ -92,7 +99,6 @@
         </span>
 
     </section>
-    <section class="space-between"></section>
     <section class="section2">
         <section>
             <section class="heading">
@@ -194,7 +200,7 @@
                                 <label class="heading">
                                     Alert And Notification (ANE) :
                                 </label>
-                                
+
                                 <ul>
                                     <li>
                                         I spearheaded the creation of a sophisticated Alert and Notification
@@ -277,19 +283,19 @@
         </section>
         <section>
             <label class="heading">
-                EDUCATIONAL QUALIFICATIONS   
+                EDUCATIONAL QUALIFICATIONS
             </label>
-            <hr class="custom-line"/>
+            <hr class="custom-line" />
             <section>
                 <label class="heading">
-                    Graduation : 
-                </label> 
-                    <college>
-                        SRMCEM (Shri Ramswaroop College of Engineering and Management, Lucknow) [BTech- 7.8 CGPA]
-                    </college>
-                    <year class="section heading right">
-                        [ 2017-2021]
-                    </year>
+                    Graduation :
+                </label>
+                <college>
+                    SRMCEM (Shri Ramswaroop College of Engineering and Management, Lucknow) [BTech- 7.8 CGPA]
+                </college>
+                <year class="section heading right">
+                    [ 2017-2021]
+                </year>
             </section>
         </section>
         <br />
@@ -297,7 +303,7 @@
             <label class="heading">
                 SNAPSHOTS
             </label>
-            <hr class="custom-line"/>
+            <hr class="custom-line" />
             <section>
                 <label class="heading">Tools:</label>
                 <tool>Intellij, Eclipse, VS Code, Git, Github.</tool><br />
